@@ -21,6 +21,7 @@ Blocking uses standard Android capabilities that the user grants explicitly. Thi
 - **Channel identification.** A video opened by search, autoplay or a shared link may not show the channel at once. Mitigation: re-check after the watch screen settles and block on first confident match.
 - **Permission friction.** Accessibility and usage access need clear explanation and a guided setup.
 - **Battery.** Limit event handling to supported packages and throttle checks.
+- **OEM battery management.** Xiaomi, Oppo, Vivo, Samsung and others stop background work aggressively, which can kill the foreground service or the accessibility service even after the user granted every permission. Most students in the target audience use these phones. Mitigation: persistent foreground-service notification, restart on boot, a setup step that asks the user to exempt Bare Scroll from battery optimisation, detection when a service has been stopped with guidance to re-enable it, and service health shown next to detector health in settings.
 - **Distribution.** Accessibility apps get extra review on public stores. A free distribution route needs to be chosen (see ROADMAP).
 
 ## Principles

@@ -19,6 +19,10 @@ Detector rules against recorded view hierarchies of each target app version. Roo
 | Locked session, swipe app away | Blocking continues |
 | Emergency unlock | Opens only after the wait |
 | Permission revoked | Banner shown, no false claim of protection |
+| Service killed by OEM battery management overnight | Stoppage detected; user guided to exempt the app; blocking resumes |
+| Battery saver on during a locked session | Blocking continues |
+| Phone reboot during a locked session | Service restarts; session and lock state intact |
+| Target app auto-updates | Detector health flags drift; no wrong blocks |
 
 ## Regression
 Re-run detector tests whenever a target app updates. Keep a table of tested app versions.
